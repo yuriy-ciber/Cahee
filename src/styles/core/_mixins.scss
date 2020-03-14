@@ -21,6 +21,11 @@
   color: $color;
   @content;
 }
+@mixin media($screen: $screen-desktop) {
+  @media screen and(min-width: $screen) {
+    @content;
+  }
+}
 
 @mixin padding-hack($padding: 50%, $size: contain, $dev: false) {
   position: relative;

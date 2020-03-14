@@ -20,7 +20,7 @@
 
   @media screen and (min-width: $screen-desktop) {
     &:hover {
-      box-shadow: 0 2px 5px 0 rgba(black, 0.5);
+      box-shadow: none;
     }
   }
 
@@ -30,5 +30,8 @@
 
   &--gallery {
     background-color: $gallery-btn-color;
+  }
+  &--subscribe {
+    background-color: $subscribe-btn-color;
   }
 }

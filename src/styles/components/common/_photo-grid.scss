@@ -38,10 +38,12 @@ $style: photo-grid;
     background-color: $grey;
     @include padding-hack(71%, cover);
     margin-bottom: 24px;
-    box-shadow: 0 2px 5px 0 (black, 0.5);
+    transition: all 0.8sec ease;
+
     &--marginless {
       margin-bottom: 0;
     }
+
     @media screen and (min-width: $screen-tablet) {
       margin-bottom: 0;
       &--large {
@@ -53,6 +55,11 @@ $style: photo-grid;
       }
       &--medium {
         padding-bottom: 34.3%;
+      }
+    }
+    @include media {
+      &:hover {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
       }
     }
   }

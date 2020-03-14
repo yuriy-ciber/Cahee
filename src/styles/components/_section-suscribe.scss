@@ -1,0 +1,63 @@
+.section-subscribe {
+  background-image: url("../../images/subscribe_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 200%;
+  background-position-y: 110%;
+  background-position-x: 100%;
+  padding-top: 75px;
+  padding-bottom: 100px;
+  @include media($screen-tablet) {
+    background-size: 150%;
+    background-position-y: 110%;
+    background-position-x: 100%;
+  }
+  @include media {
+    padding-top: 145px;
+    padding-bottom: 163px;
+    background-size: cover;
+    background-size: 97%;
+    background-position-y: center;
+  }
+
+  &__container {
+    @extend %container;
+  }
+  &__title {
+    @include text($H700, 700, $dark);
+    margin-bottom: 34px;
+  }
+  &__description {
+    @include text($H200, 300, $dark);
+    margin-bottom: 31px;
+    @include media($screen-tablet) {
+      max-width: 550px;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 55px;
+    border: 1px solid $dark;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    outline: none;
+    @include text($H100, 400);
+    &::placeholder {
+      opacity: 0.5;
+      @include text($H100, 300, $text-main-color);
+    }
+    @include media {
+      font-size: $H50;
+      margin-right: 30px;
+      margin-bottom: 0px;
+      width: 50%;
+      max-width: 570px;
+      &::placeholder {
+        font-size: $H50;
+      }
+    }
+  }
+  &__button {
+    margin: 0px;
+  }
+}
