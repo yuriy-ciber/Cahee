@@ -1,0 +1,39 @@
+.header {
+  background-image: url(/images/strobery.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  &__container {
+    min-height: 100vh;
+    @include flex(flex-start, center);
+    padding-left: 165px;
+  }
+
+  @media screen and (min-width: $screen-tablet) {
+    justify-content: flex-start;
+  }
+  //   &__content {
+  //     @include flex(center, center, column);
+  //     @media screen and (min-width: $screen-tablet) {
+  //     display: block;
+  //     }
+  //   }
+  &__titel {
+    @include text($H800, 800);
+    margin-bottom: 34px;
+    line-height: 1;
+  }
+  &__subtitel {
+    @include text($H200, 300);
+    max-width: 368px;
+    line-height: 1.5;
+    margin-bottom: 60px;
+  }
+  &__scroll {
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

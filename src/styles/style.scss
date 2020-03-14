@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+
+@import "./core/vars"; // переменные
+@import "./core/commons"; //общие стили
+@import "./core/mixins"; //миксины
+
+//общие блоки
+@import "./components/common/burger";
+@import "./components/common/button";
+@import "./components/common/logo";
+@import "./components/common/scroll";
+@import "./components/common/photo-grid";
+
+//блоки
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/about";
+@import "./components/services";
+@import "./components/section-gallery";
+@import "./components/link-card";
+@import "./components/contact";
+@import "./components/contact-form";
+@import "./components/footer";
+
+@import "./core/inheritace";

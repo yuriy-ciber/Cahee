@@ -1,0 +1,34 @@
+.button {
+  border: none;
+  text-decoration: none;
+  background-color: $header-btn-color;
+  box-shadow: $btn-shadow;
+  @include text($H300, 300, $white);
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 20px 25px;
+  align-self: start;
+  margin-bottom: 491px;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (min-width: $screen-tablet) {
+    width: fit-content;
+  }
+
+  @media screen and (min-width: $screen-desktop) {
+    &:hover {
+      box-shadow: 0 2px 5px 0 rgba(black, 0.5);
+    }
+  }
+
+  &--header {
+    background-color: $header-btn-color;
+  }
+
+  &--gallery {
+    background-color: $gallery-btn-color;
+  }
+}

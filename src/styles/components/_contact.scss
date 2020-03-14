@@ -1,0 +1,38 @@
+.section-contact {
+  @extend %section;
+  @include flex(flex-end, center, column);
+  background-image: url(/images/contact_bg.png);
+  background-size: cover;
+  background-position: center center;
+  padding-top: 101px;
+  padding-bottom: 120px;
+
+  &__header {
+    @include flex(center, center, column);
+  }
+
+  &__container {
+    // @extend %container;
+    @include flex(space-around, flex-start);
+  }
+
+  &__title {
+    font-size: 90px;
+    line-height: 25px;
+    font-weight: 700;
+    color: $dark;
+    margin-bottom: 48px;
+    // text-align: center;
+  }
+
+  &__subtitle {
+    display: block;
+    width: 342px;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 300;
+    color: $dark;
+    margin-bottom: 46px;
+    text-align: center;
+  }
+}

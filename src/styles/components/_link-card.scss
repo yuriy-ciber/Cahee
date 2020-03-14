@@ -1,0 +1,38 @@
+.link-card {
+  width: 100%;
+  min-height: 100px;
+  background-color: $white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0, auto;
+  @include flex(center, center);
+  @media screen and (min-width: $screen-desktop) {
+    width: 400px;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 5px 0px rgba(black, 0.4);
+  }
+
+  &__text-wrapper {
+    flex: 1 1;
+    @include flex(center, center);
+    border-right: 1px solid $dark;
+  }
+
+  &__text {
+    @include text($H300, 700);
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0, auto;
+  }
+
+  &__icon-wrapper {
+    width: 100px;
+    @include flex(center, center);
+  }
+
+  &__icon {
+    @include svg(60px, $service-bg-color);
+  }
+}

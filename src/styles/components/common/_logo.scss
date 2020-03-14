@@ -1,0 +1,11 @@
+.logo {
+  color: $dark;
+  font-family: $logo-font;
+  font-size: $H800;
+  font-weight: 400;
+  line-height: 1;
+
+  &--footer {
+    color: $white;
+  }
+}
