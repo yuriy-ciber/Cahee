@@ -26,7 +26,10 @@
   flex-direction: column;
   align-items: stretch;
 }
-
+%visible-z {
+  position: relative;
+  z-index: 1;
+}
 // & * {
 //   width: 100%;
 // }

@@ -12,7 +12,6 @@
   }
 
   &__container {
-    // @extend %container;
     @include flex(space-around, flex-start);
   }
 
@@ -22,7 +21,6 @@
     font-weight: 700;
     color: $dark;
     margin-bottom: 48px;
-    // text-align: center;
   }
 
   &__subtitle {

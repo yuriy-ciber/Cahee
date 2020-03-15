@@ -1,0 +1,84 @@
+.card {
+  height: 310px;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.5s ease-in;
+  box-shadow: $card-shadow;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__date-box {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__date-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: rgba(50, 60, 60, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__date {
+    color: $white;
+    font-family: $base-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  &__month {
+    color: $white;
+    font-family: $base-font;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @extend %visible-z;
+    padding: 20px;
+    background-image: $content-gradient;
+    position: absolute;
+    left: 0;
+    top: 209;
+  }
+
+  &__title {
+    @include text($H300, 700, $white);
+    margin-bottom: 18px;
+  }
+
+  &__info {
+    @include text($H10, 300, $white);
+  }
+  &:hover {
+    &:nth-child(1) {
+      transform: scale(1.1);
+    }
+    &:nth-child(2) {
+      transform: translate(10px, 15px);
+    }
+    &:nth-child(3) {
+      transform: rotate(15deg) scale(1.1);
+    }
+  }
+}
