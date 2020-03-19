@@ -7,7 +7,6 @@
   line-height: 1;
   text-transform: uppercase;
   padding: 20px 25px;
-  // align-self: start;
   margin-bottom: 491px;
   width: 100%;
 
@@ -36,5 +35,8 @@
   }
   &--blog {
     background-color: $blog-btn-color;
+  }
+  &--contact {
+    background-color: $about-bg-color;
   }
 }

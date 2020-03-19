@@ -8,6 +8,7 @@
   box-shadow: $card-shadow;
 
   &__image {
+    // @extend %image-absolute;
     position: absolute;
     top: 0;
     bottom: 0;

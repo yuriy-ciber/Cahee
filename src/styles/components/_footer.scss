@@ -5,24 +5,39 @@
 
   &__container {
     @extend %container;
-    @include flex(space-between, center);
+    @include flex(center, center, column);
+
+    @include media {
+      @include flex(space-between, center);
+    }
   }
 
   &__copyright {
-    font-size: 16px;
+    @include text($H300, 300, $footer-text-color);
     line-height: 25px;
-    font-weight: 300;
     opacity: 0.5;
-    color: #b9b9b9;
+    margin-bottom: 20px;
+    @include media {
+      @include text($H100, 300, $footer-text-color);
+      line-height: 25px;
+      font-weight: 300;
+      opacity: 0.5;
+    }
   }
   &__logo {
     text-decoration: none;
+    margin-bottom: 20px;
+    @include media {
+      text-decoration: none;
+    }
   }
   &__autor {
-    font-size: 15px;
+    @include text($H300, 300, $footer-text-color);
     line-height: 25px;
-    font-weight: 300;
-    color: $grey;
+    @include media {
+      @include text($H100, 300, $footer-text-color);
+      line-height: 25px;
+    }
   }
   &__autor--red {
     font-size: 15px;

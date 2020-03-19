@@ -6,56 +6,72 @@
       contact with me!
     </p>
   </div>
-  <div class="container section-contact__container">
-    <div class="form-wrapper">
-      <form action="" method="GET" name="user-contact" class="contact-form">
-        <input
-          class="input"
-          type="text"
-          id="user-name"
-          placeholder="Your name..."
-          autofocus
-        /><br />
-        <input
-          class="input"
-          type="email"
-          id="user-email"
-          placeholder="Your email..."
-        /><br />
-        <input
-          class="input"
-          type="number"
-          id="user-phone"
-          placeholder="Your phone number..."
-        /><br />
-        <textarea
-          class="user-message"
-          name="user-contact"
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Your message..."
-        >
-        </textarea>
-      </form>
-    </div>
 
-    <div class="owner">
-      <ul class="owner__list list">
-        <li class="owner__list-item">
-          <h3 class="owner-list__title">ADDRESS</h3>
-          <p class="owner-list__item-addres">
+  <div class="container section-contact__container">
+    <form
+      action="/"
+      method="GET"
+      name="user-contact"
+      class="section-contact__form"
+    >
+      <input
+        class="contact-form__input input"
+        type="text"
+        id="user-name"
+        placeholder="Your name..."
+        autofocus
+        required
+      />
+      <input
+        class="contact-form__input input"
+        type="email"
+        id="user-email"
+        placeholder="Your email..."
+        required
+      />
+      <input
+        class="contact-form__input input"
+        type="tel"
+        id="user-phone"
+        minlength="9"
+        placeholder="Your phone number..."
+        required
+      />
+      <textarea
+        class="contact-form__input input input--textarea"
+        name="user-contact"
+        id="user-message"
+        cols="30"
+        rows="17"
+        placeholder="Your message..."
+      >
+      </textarea>
+      <button form="user-contact" type="submit" class="button button--contact">
+        Send
+      </button>
+    </form>
+
+    <div class="section-contact__inner">
+      <ul class="section-contact__list list">
+        <li class="section-contact__list-item">
+          <h3 class="section-contact__label">ADDRESS</h3>
+          <p class="section-contact__value">
             123 City name, Street, City, Country
           </p>
         </li>
 
-        <li class="owner-list__item">
-          <h3 class="owner-list__title">EMAIL</h3>
-          <p class="owner-list__item-email">cahee@domain.com</p>
+        <li class="section-contact__list-item">
+          <h3 class="section-contact__label">EMAIL</h3>
+          <a href="mailto:cahee@domain.com" class="section-contct__value"
+            >cahee@domain.com</a
+          >
         </li>
-        <li class="owner-list__item">
-          <h3 class="owner-list__title">PHONE</h3>
-          <p class="owner-list__phone">+012 345 6789</p>
+
+        <li class="section-contact__list-item">
+          <h3 class="section-contact__label">PHONE</h3>
+          <a href="tel:+0123456789" class="section-contact__value"
+            >+012 345 6789</a
+          >
         </li>
       </ul>
     </div>

@@ -4,6 +4,7 @@
   @include flex(center, center, column);
 
   &__container {
+    @extend %container;
     @include flex(center, center, column);
   }
 
@@ -23,17 +24,28 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-  }
+    @include flex(flex-start, sretch, column);
+    margin-bottom: 30px;
 
-  &__list-item {
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include media {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-bottom: 50px;
     }
   }
 
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @include media {
+      &:not(:last-child) {
+        margin-bottom: 0px;
+        margin-right: 30px;
+      }
+    }
+  }
   &__button {
     margin-bottom: 0px;
   }

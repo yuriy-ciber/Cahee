@@ -7,6 +7,7 @@
   background-position-x: 100%;
   padding-top: 75px;
   padding-bottom: 100px;
+
   @include media($screen-tablet) {
     background-size: 150%;
     background-position-y: 110%;

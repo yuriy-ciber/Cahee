@@ -11,6 +11,7 @@ $gallery-bg-color: #ffe92f;
 $subscribe-bg-color: white;
 $blog-bg-color: #b07cf7;
 $footer-bg-color: #262626;
+$footer-text-color: #b9b9b9;
 
 // Button colors
 $header-btn-color: #ff6033;
@@ -39,7 +40,9 @@ $text-marked-color: #ff2b58;
 
 //Form color
 $input-color: #00c4c4;
-
+$input-active-border: #355b82;
+$input-error-border: #ff2b58;
+$input-valid-border: #01a301;
 @function calcRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;

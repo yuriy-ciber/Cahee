@@ -4,17 +4,16 @@
   background-image: url(/images/contact_bg.png);
   background-size: cover;
   background-position: center center;
-  padding-top: 101px;
-  padding-bottom: 120px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include media {
+    padding-top: 101px;
+    padding-bottom: 120px;
+  }
 
   &__header {
     @include flex(center, center, column);
   }
-
-  &__container {
-    @include flex(space-around, flex-start);
-  }
-
   &__title {
     font-size: 90px;
     line-height: 25px;
@@ -32,5 +31,25 @@
     color: $dark;
     margin-bottom: 46px;
     text-align: center;
+  }
+
+  &__container {
+    @include flex(flex-start, sretch, column);
+
+    @include media {
+      @include flex(space-around, flex-start);
+    }
+  }
+  &__form {
+    @include flex(center, flex-start, column);
+  }
+  &__form:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &__list-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &__value {
+    text-decoration: none;
   }
 }
