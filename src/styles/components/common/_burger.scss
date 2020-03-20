@@ -3,6 +3,7 @@ $style: burger;
   position: relative;
   z-index: 11;
   display: block;
+
   &__input {
     opacity: 0;
     position: absolute;
@@ -10,20 +11,20 @@ $style: burger;
     visibility: hidden;
     &:checked + .#{$style}__box {
       .#{$style}__item:nth-child(1) {
-        width: 80%;
+        transform: translateY(14px) rotate(45deg);
       }
       .#{$style}__item:nth-child(2) {
-        width: 60%;
+        visibility: hidden;
       }
       .#{$style}__item:nth-child(3) {
-        width: 90%;
+        transform: rotate(-45deg);
       }
     }
     &:checked ~ .#{$style}__menu {
       @media screen and (max-width: $screen-tablet) {
         visibility: visible;
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
       }
     }
   }
@@ -32,7 +33,7 @@ $style: burger;
       transition: all 0.4s ease;
       visibility: hidden;
       opacity: 0;
-      transform: translateY(-200%);
+      transform: translateX(-200%);
       background-color: rgba($white, 0.9);
     }
   }

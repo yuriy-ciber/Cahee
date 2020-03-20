@@ -9,6 +9,9 @@
   @include media {
     padding-top: 101px;
     padding-bottom: 120px;
+    &__button {
+      width: 35%;
+    }
   }
 
   &__header {
@@ -23,10 +26,11 @@
   }
 
   &__subtitle {
-    display: block;
-    width: 342px;
+    // display: block;
+    max-width: 342px;
+    margin: 0 auto;
     font-size: 17px;
-    line-height: 25px;
+    line-height: 1.5;
     font-weight: 300;
     color: $dark;
     margin-bottom: 46px;
@@ -40,16 +44,44 @@
       @include flex(space-around, flex-start);
     }
   }
+
   &__form {
     @include flex(center, flex-start, column);
+    &:valid + * {
+      visibility: visible;
+    }
   }
+
   &__form:not(:last-child) {
     margin-bottom: 15px;
   }
+  &--textarea {
+    // padding-left: 15px;
+    padding: 20px, 15px, 0, 15px;
+    width: 100%;
+  }
+
+  &__list-item {
+    text-align: center;
+    @include text($H300, 400);
+    @include media {
+      text-align: left;
+    }
+  }
+
   &__list-item:not(:last-child) {
     margin-bottom: 15px;
   }
+
   &__value {
     text-decoration: none;
+    @include text($H300, 400);
+    @include media {
+      @include text($H100, 400);
+    }
+  }
+  &__button {
+    margin-bottom: 30px;
+    visibility: hidden;
   }
 }

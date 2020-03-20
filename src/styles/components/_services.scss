@@ -1,50 +1,63 @@
 .section-services {
-  @extend %section;
-  height: 100vh;
   background-color: $service-bg-color;
-  padding-top: 100px;
-  padding-bottom: 163px;
+  @extend %section;
 
   &__container {
-    @include flex(space-between, center);
-    // padding-top: 70px;
-    // padding-bottom: 70px;
+    @include flex(flex-start, flex-start, column);
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include media {
+      @include flex(center, center);
+      padding: 100px 165px 163px 265px;
+    }
+  }
+  &__picture-side {
+    @include flex(center, center);
+    position: relative;
+    width: 100%;
+    @include padding-hack(80%);
+    order: -1;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: $screen-desktop) {
+      order: 2;
+      width: 50%;
+      margin-bottom: 0;
+      padding-bottom: 35%;
+    }
   }
 
   &__content-side {
     width: 100%;
-    @include flex();
-    margin-bottom: 32px;
-    flex: 1 1;
+    @include flex(center, center, column);
     @media screen and (min-width: $screen-desktop) {
       width: 50%;
       align-items: flex-start;
-      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include text($H800, 700, $white);
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    @include media {
+      @include text($H900, 700, $white);
     }
   }
 
   &__list {
     width: 100%;
+    list-style: none;
   }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-  }
-
-  &__picture-side {
-    @include flex(center, center, column);
-    position: relative;
-    width: 100%;
-    @include padding-hack(40%);
-    flex: 1 1;
-  }
-  &__title {
-    @include text($H800, 700, $white);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
   }
 }

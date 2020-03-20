@@ -20,6 +20,8 @@
     margin-bottom: 32px;
   }
   &__button {
+    display: block;
+    text-align: center;
     @extend %center;
   }
 }

@@ -1,10 +1,12 @@
 .link-card {
+  display: block;
   width: 100%;
   min-height: 100px;
   background-color: $white;
   text-decoration: none;
   transition: all 0.2s ease;
   margin: 0, auto;
+
   @include flex(center, center);
   @media screen and (min-width: $screen-desktop) {
     width: 400px;

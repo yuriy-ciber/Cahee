@@ -1,4 +1,4 @@
-<section class="section-contact">
+<section id="contact" class="section-contact">
   <div class="section-contact__header">
     <h2 class="section-contact__title">Contact</h2>
     <p class="section-contact__subtitle">
@@ -8,48 +8,44 @@
   </div>
 
   <div class="container section-contact__container">
-    <form
-      action="/"
-      method="GET"
-      name="user-contact"
-      class="section-contact__form"
-    >
-      <input
-        class="contact-form__input input"
-        type="text"
-        id="user-name"
-        placeholder="Your name..."
-        autofocus
-        required
-      />
-      <input
-        class="contact-form__input input"
-        type="email"
-        id="user-email"
-        placeholder="Your email..."
-        required
-      />
-      <input
-        class="contact-form__input input"
-        type="tel"
-        id="user-phone"
-        minlength="9"
-        placeholder="Your phone number..."
-        required
-      />
-      <textarea
-        class="contact-form__input input input--textarea"
-        name="user-contact"
-        id="user-message"
-        cols="30"
-        rows="17"
-        placeholder="Your message..."
+    <div>
+      <form class="section-contact__form" id="form" action="/">
+        <input
+          class="section-contact__input input"
+          type="text"
+          placeholder="Your name..."
+          minlength="2"
+          required
+        />
+        <input
+          class="section-contact__input input"
+          type="email"
+          placeholder="Your email..."
+          required
+        />
+        <input
+          class="section-contact__input input"
+          type="tel"
+          placeholder="Your phone number..."
+          minlength="9"
+          required
+        />
+        <textarea
+          class="section-contact__input input input--textarea"
+          placeholder="Your message..."
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+      </form>
+      <button
+        form="form"
+        type="submit"
+        class="button button--contact section-contact__button button--form"
       >
-      </textarea>
-      <button form="user-contact" type="submit" class="button button--contact">
         Send
       </button>
-    </form>
+    </div>
 
     <div class="section-contact__inner">
       <ul class="section-contact__list list">

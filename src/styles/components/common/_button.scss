@@ -1,6 +1,7 @@
 .button {
   border: none;
   text-decoration: none;
+  text-align: center;
   background-color: $header-btn-color;
   box-shadow: $btn-shadow;
   @include text($H300, 300, $white);

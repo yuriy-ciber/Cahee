@@ -2,6 +2,7 @@ $style: photo-grid;
 .photo-grid {
   &__row {
     @include flex(flex-start, stretch, column);
+
     @media screen and (min-width: $screen-tablet) {
       flex-direction: row;
       &:not(:last-child) {
@@ -16,6 +17,7 @@ $style: photo-grid;
     width: 100%;
     @include flex;
     flex-direction: column;
+
     @media screen and (min-width: $screen-tablet) {
       width: auto;
       flex: 1 1 100%;

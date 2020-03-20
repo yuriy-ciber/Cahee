@@ -1,27 +1,40 @@
 .navigation {
   position: fixed;
-  background-color: rgba($white, 0.3);
+  background-color: $navigation-mobile-color;
   top: 0;
   left: 0;
   right: 0;
   z-index: 11;
-  padding-left: 165px;
-  padding-right: 164px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  @include media() {
+    background-color: $white;
+  }
+
+  @include media {
+    padding-left: 165px;
+    padding-right: 164px;
+  }
 
   &__container {
-    // @extend %container;
     height: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__logo {
+    color: $white;
+    @include media {
+      color: $dark;
+    }
   }
 
   &__link {
     text-decoration: none;
     color: $dark;
     font-family: $base-font;
-    font-size: 16px;
-    font-weight: 700;
+    @include text($H100, 700);
     text-transform: uppercase;
     border-top: 3px solid transparent;
   }
@@ -31,17 +44,29 @@
   }
 
   &__list {
-    display: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    list-style: none;
+    @include flex(flex-start, center, column);
+    position: fixed;
+    top: 100px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 32px 24px;
+    z-index: 10;
+    background-color: #fff;
     transition: all 1sec ease-in;
 
     @media screen and (min-width: $screen-tablet) {
-      flex-direction: flex;
+      flex-direction: row;
+      position: static;
+      padding: 0;
     }
   }
   &__item:not(:last-child) {
-    margin-right: 45px;
+    margin-bottom: 30px;
+    @include media($screen-tablet) {
+      margin-bottom: 0;
+      margin-right: 45px;
+    }
   }
 }

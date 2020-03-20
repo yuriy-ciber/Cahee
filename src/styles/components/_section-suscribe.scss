@@ -11,13 +11,14 @@
   @include media($screen-tablet) {
     background-size: 150%;
     background-position-y: 110%;
-    background-position-x: 100%;
+    background-position-x: -20%;
   }
+
   @include media {
     padding-top: 145px;
     padding-bottom: 163px;
     background-size: cover;
-    background-size: 97%;
+    background-size: 95%;
     background-position-y: center;
   }
 

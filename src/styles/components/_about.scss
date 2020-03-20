@@ -1,55 +1,66 @@
 .section-about {
   @extend %section;
-  height: 100vh;
   background-color: $about-bg-color;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
   &__container {
-    @include flex(space-around, center);
-    padding-top: 70px;
-    padding-bottom: 70px;
-    @media screen and (max-width: $screen-iphone-plus) {
-      flex-direction: column;
+    flex-direction: column;
+    @include media {
+      @include flex(space-around, center);
+    }
+  }
+  &__image-wrapper {
+    @include flex;
+    position: relative;
+    @include padding-hack(100%);
+
+    @media screen and (min-width: $screen-desktop) {
+      width: 50%;
+      padding-bottom: 35%;
+    }
+  }
+  &__image {
+    transition: all 0.4s ease;
+    @media screen and (min-width: $screen-desktop) {
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
-  &__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  &__text-wrapper {
+    width: 100%;
+    @include flex(center, center, column);
+
+    @media screen and (min-width: $screen-desktop) {
+      width: 50%;
+      align-items: flex-start;
+      padding-left: 90px;
+    }
   }
 
   &__title {
-    color: $white;
-    font-size: 50px;
-    font-weight: 700;
+    @include text($H800, 700, $white);
     line-height: 27px;
     margin-bottom: 34px;
-    @media screen and (max-width: $screen-iphone-plus) {
+
+    @include media {
+      @include text($H900, 700, $white);
+      line-height: 27px;
       text-align: center;
     }
   }
 
   &__text {
-    max-width: 499px;
-    color: $white;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 27px;
+    @include text($H100, 300, $white);
+    line-height: 1.1;
+
+    @include media {
+      @include text($H200, 300, $white);
+      max-width: 499px;
+      line-height: 1.4;
+      text-align: left;
+    }
   }
-  &__image-wrapper {
-    @include padding-hack(calc(50% * 9 / 13)); // position: relative;
-    // @media screen and (max-width: $screen-iphone-plus) {
-    //   @include padding-hack(30%);
-    //   min-height: 100vh;;
-  }
-  //   &__image{
-  //     position: absolute;
-  //     top: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100%;
-  //     object-fit: cover;
-  //   }
 }
