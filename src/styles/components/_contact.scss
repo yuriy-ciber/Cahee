@@ -1,7 +1,7 @@
 .section-contact {
   @extend %section;
   @include flex(flex-end, center, column);
-  background-image: url(/images/contact_bg.png);
+  background-image: url(../images/contact_bg.png);
   background-size: cover;
   background-position: center center;
   padding-top: 50px;
