@@ -3,21 +3,21 @@
   background-size: cover;
   background-position: center center;
   position: relative;
-  padding-top: 150px;
+  padding-top: 276px;
+  min-height: 100vh;
 
   &__container {
-    min-height: 100vh;
-    @include flex(center, center);
+    @extend %container;
+    @include flex(center, center, column);
 
     @include media($screen-tablet) {
-      justify-content: flex-start;
-      padding-left: 165px;
+      @include flex(flex-start, stretch, column);
     }
   }
 
-  &__content {
-    @include flex(center, center, column);
-  }
+  // &__content {
+  //   @include flex(flex-start, center, column);
+  // }
 
   &__titel {
     @include text($H800, 800);

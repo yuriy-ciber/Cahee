@@ -27,7 +27,7 @@
   }
   &__title {
     @include text($H700, 700, $dark);
-    margin-bottom: 34px;
+    margin-bottom: 20px;
   }
   &__description {
     @include text($H200, 300, $dark);
@@ -38,7 +38,7 @@
   }
   &__input {
     width: 100%;
-    height: 55px;
+    height: 60px;
     border: 1px solid $dark;
     padding-left: 15px;
     margin-bottom: 30px;

@@ -35,6 +35,6 @@
   }
 
   &__icon {
-    @include svg(60px, $service-bg-color);
+    @include svg(60px, $dark);
   }
 }

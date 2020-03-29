@@ -26,11 +26,10 @@
   }
 
   &__subtitle {
-    // display: block;
-    max-width: 342px;
+    max-width: 360px;
     margin: 0 auto;
     font-size: 17px;
-    line-height: 1.5;
+    line-height: 1;
     font-weight: 300;
     color: $dark;
     margin-bottom: 46px;
@@ -41,7 +40,8 @@
     @include flex(flex-start, sretch, column);
 
     @include media {
-      @include flex(space-around, flex-start);
+      @include flex(flex-star, flex-start);
+      padding-left: 220px;
     }
   }
 
@@ -56,9 +56,15 @@
     margin-bottom: 15px;
   }
   &--textarea {
-    // padding-left: 15px;
     padding: 20px, 15px, 0, 15px;
     width: 100%;
+  }
+
+  &__left-side {
+    margin-right: 0px;
+    @include media {
+      margin-right: 170px;
+    }
   }
 
   &__list-item {
