@@ -16,13 +16,13 @@
     @include flex(center, center);
     position: relative;
     width: 100%;
-    @include padding-hack(80%);
+    @include padding-hack(90%);
     order: -1;
     margin-bottom: 32px;
 
     @media screen and (min-width: $screen-desktop) {
       order: 2;
-      width: 50%;
+      width: 60%;
       margin-bottom: 0;
       padding-bottom: 35%;
     }
@@ -33,12 +33,12 @@
     @include flex(center, center, column);
     @media screen and (min-width: $screen-desktop) {
       width: 50%;
-      align-items: flex-start;
+      align-items: center;
     }
   }
 
   &__title {
-    @include text($H800, 700, $white);
+    @include text($H900, 700, $white);
     position: absolute;
     top: 50%;
     text-align: center;
@@ -51,7 +51,6 @@
   }
 
   &__list {
-    width: 100%;
     list-style: none;
   }
 

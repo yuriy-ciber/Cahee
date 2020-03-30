@@ -19,7 +19,8 @@
   &__text-wrapper {
     flex: 1 1;
     @include flex(center, center);
-    border-right: 1px solid $dark;
+    width: 100%;
+    height: 100%;
   }
 
   &__text {
@@ -31,10 +32,15 @@
 
   &__icon-wrapper {
     width: 100px;
+    height: 100px;
     @include flex(center, center);
+    border-left: 1px solid $dark;
   }
 
   &__icon {
     @include svg(60px, $dark);
+  }
+  &__icon:hover {
+    @include svg(60px, $service-bg-color);
   }
 }
